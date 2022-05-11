@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Page</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Event Scheduler</title>
 </head>
-<body>
-    <header>Hi Guys!</header>
-    <!-- Javascript -->
-    <script src="./assets/js/script.js"></script>
+
+<body class="flex-column min-100-vh">
+    <header class="hero">
+        <h1 class="app-title">Awesome Event Planner</h1>
+        <p>Search for an event near you!
+        </p>
+    </header>
+
+
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <h3 class="card-header">Search For an Event</h3>
+                <form id="user-form" class="card-body">
+                    <label class="form-label" for="username"></label>
+                    <input name="city" id="username" type="text" autofocus="true" class="form-input"
+                        placeholder="Enter Events" />
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+
+            <div class="card d-flex">
+                <div id="language-buttons" class="card-body">
+                    <h2 class="card-header">Search History</h2>
+                    <form id="recent"></form>
+                    <button data-language="javascript" class="btn"></button>
+                </div>
+            </div>
+        </div>
+        <div class="m-6 card col-6 col-md-8 display">
+
+            <h3 id="city-weather" class="list-group"></h3>
+            <div id="current-weather" class="city-date-icon">
+            </div>
+        </div>
+
+        <!-- 5 day forecast -->
+        <div class="m-6 card col-6 col-md-8 display five-day-forecast">
+            <h3 class="fiveDayHeader">Extra Box</h3>
+            <br />
+            <!-- cards with JS -->
+            <div id="cards" class="d-flex container">
+                <div id="currentDay" class="col-12-lg">
+                    <div class="row" id="fiveDayWeather">
+
+                    </div>
+
+    </main>
+
 </body>
+
 </html>
