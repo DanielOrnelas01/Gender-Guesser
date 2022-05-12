@@ -1,10 +1,10 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #9caea9;
-  --tertiary: #788585;
+  --primary: #ffffff;
+  --secondary: #0c60af;
+  --tertiary: #5b9eca;
   --light-dark: #6f6866;
-  --dark: #38302e;
-  --border-radius: .3rem;
+  --dark: #0a0201;
+  --border-radius: .5rem;
 }
 
 * {
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
-  color: var(--dark);
+  /* color: var(--dark); */
   line-height: 1.5;
   font-size: 16px;
 }
@@ -53,7 +53,7 @@ p {
   color: var(--primary);
   border: none;
   outline: none;
-  background-color: var(--light-dark);
+  background-color: var(--tertiary);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
@@ -96,6 +96,8 @@ p {
   padding: 3% 4%;
   background-color: var(--dark);
   color: var(--primary);
+  background-image: linear-gradient(30deg, #c59205 0%, #d42709 100%);
+  text-align: center;
 }
 
 .hero p {
@@ -183,6 +185,51 @@ p {
   border: 2px solid var(--light-dark);
   border-radius: var(--border-radius);
 }
+
+
+.social-links {
+  background: #1d92cf;
+  padding: 2rem 0 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.social-links i.fa {
+  font-size: 1.4rem;
+  padding-right: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .social-links {
+    padding: 2rem 0;
+  }
+  .social-links i.fa {
+    font-size: 2rem;
+    display: block;
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+  }
+  .social-links a {
+    font-weight: bold;
+  }
+  .social-links .columns {
+    margin: 1rem 0;
+  }
+  .social-links .mobile-stack {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+
 
 /* HEIGHT / WIDTH UTILS */
 .min-100-vh {

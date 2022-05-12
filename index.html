@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Event Scheduler</title>
@@ -14,9 +15,9 @@
 <body class="flex-column min-100-vh">
     <header class="hero">
         <h1 class="app-title">Awesome Event Planner</h1>
-        <p>Search for an event near you!
-        </p>
+        <h2>Search for an event near you!</h2>
     </header>
+
 
 
     <main class="flex-row justify-space-between">
@@ -26,10 +27,11 @@
                 <form id="user-form" class="card-body">
                     <label class="form-label" for="username"></label>
                     <input name="city" id="username" type="text" autofocus="true" class="form-input"
-                        placeholder="Enter Events" />
-                    <button type="submit" class="btn">Search</button>
+                        placeholder="Enter State" />
+                    <button class="btn" id="submit">Search</button>
                 </form>
             </div>
+
 
             <div class="card d-flex">
                 <div id="search-history-buttons" class="card-body">
@@ -39,6 +41,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="m-6 card col-6 col-md-8 display">
 
             <h3 id="city-weather" class="list-group"></h3>
@@ -48,7 +52,7 @@
 
         <!-- 5 day forecast -->
         <div class="m-6 card col-6 col-md-8 display five-day-forecast">
-            <h3 class="fiveDayHeader">Extra Box</h3>
+            <h3 class="Header">Extra Box</h3>
             <br />
             <!-- cards with JS -->
             <div id="cards" class="d-flex container">
@@ -56,9 +60,28 @@
                     <div class="row" id="fiveDayWeather">
 
                     </div>
-
     </main>
 
+
+    <div class="social-links">
+        <div class="row">
+            <div class="small-6 medium-3 columns text-center mobile-stack">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+            </div>
+            <div class="small-6 medium-3 columns text-center mobile-stack">
+                <a href="https://www.ticketmaster.com"><i class="fa fa-instagram"
+                        aria-hidden="true"></i>Ticketmaster</a>
+            </div>
+            <div class="small-6 medium-3 columns text-center mobile-stack">
+                <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i>Pinterest</a>
+            </div>
+            <div class="small-6 medium-3 columns text-center mobile-stack">
+                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
