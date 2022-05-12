@@ -93,6 +93,7 @@ p {
   box-shadow: 2px 2px var(--dark);
 }
 
+
 .hero {
   padding: 3% 4%;
   /* background-color: var(--dark);
@@ -189,7 +190,7 @@ p {
 
 
 .social-links {
-  background: #1d92cf;
+  background: #080808;
   padding: 2rem 0 1rem;
 }
 
