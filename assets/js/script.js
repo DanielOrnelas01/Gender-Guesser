@@ -1,20 +1,20 @@
-const encodedParams = new URLSearchParams();
-encodedParams.append("pollingCallbackUrl", "<REQUIRED>");
-encodedParams.append("apiKey", "<REQUIRED>");
-encodedParams.append("cartId", "<REQUIRED>");
-encodedParams.append("deliveries[0]", "<REQUIRED>");
+var userFormEl = document.querySelector("#user-form");
+var nameInputEl = document.querySelector("#username");
 
-const options = {
-	method: 'POST',
-	headers: {
-		'content-type': 'application/x-www-form-urlencoded',
-		'X-RapidAPI-Host': 'Ticketmasterstefan-skliarovV1.p.rapidapi.com',
-		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-	},
-	body: encodedParams
+var formSubmitHandler = function (event) {
+  // prevent page from refreshing
+  event.preventDefault();
+  // get value from input element
+  var state = nameInputEl.value.trim();
+
+  if (state) {
+    // renderRecents();
+    // clear old content
+    nameInputEl.value = "";
+	console.log(state);
+  } else {
+    alert("Please enter a State!");
+  }
 };
 
-fetch('https://ticketmasterstefan-skliarovv1.p.rapidapi.com/addDeliveriesToCart', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err)); 
+userFormEl.addEventListener("submit", formSubmitHandler);
