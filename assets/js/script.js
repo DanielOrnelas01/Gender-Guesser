@@ -17,6 +17,18 @@ var formSubmitHandler = function (event) {
   }
 };
 
+// alchol api
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com',
+		'X-RapidAPI-Key': '90378b7530msh7d82c41a463e11ep1da2d8jsne90cccb035d1'
+	}
+};
 
+fetch('https://the-cocktail-db.p.rapidapi.com/search.php?i=vodka', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
 userFormEl.addEventListener("submit", formSubmitHandler);
