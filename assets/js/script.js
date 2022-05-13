@@ -50,7 +50,6 @@ var getChuckJokes = function() {
       joke.innerText = data.value;
 
       chuckJokesHeader.append(joke);
-      chuckJokesHeader.append(joke);
       });
     };
   });
