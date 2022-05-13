@@ -9,23 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Event Scheduler</title>
+    <title>Age Guesser</title>
 </head>
 
 <body class="flex-column min-100-vh">
-    <header class="hero">
-        <h1 class="app-title">Awesome Event Planner</h1>
-        <h2>Search for an event near you!</h2>
+    <header class="subnav-hero-section">
+        <h1 class="subnav-hero-headline">Guess Your Name and Get A Chuck Norris Joke! <small>by Team Awesome</small></h1>
+        <ul class="subnav-hero-subnav">
+        </ul>
+    </header>
+
+
     </header>
 
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
             <div class="card">
-                <h3 class="card-header">Search For an Event</h3>
+                <h3 class="card-header">Search</h3>
                 <form id="user-form" class="card-body">
                     <label class="form-label" for="username"></label>
-                    <input name="city" id="username" type="text" autofocus="true" class="form-input"
-                        placeholder="Enter State" />
+                    <input name="ingredient" id="ingredientname" type="text" autofocus="true" class="form-input"
+                        placeholder="Enter" />
                     <button class="btn" id="submit">Search</button>
                 </form>
             </div>
@@ -33,48 +37,51 @@
 
             <div class="card d-flex">
                 <div id="search-history-buttons" class="card-body">
-                    <h2 class="card-header">Search History</h2>
-                    <form id="recent"></form>
-                    <button data-language="events" class="btn"></button>
+                    <h2 class="card-header">We Got Jokes!</h2>
+                    <form id="joke-form">
+                        <button id="click" class="btn">Push Here!</button>
+                    </form>
                 </div>
             </div>
         </div>
 
 
         <div class="m-6 card col-6 col-md-8 display">
-
             <h3 id="city-weather" class="list-group"></h3>
             <div id="current-weather" class="city-date-icon">
             </div>
         </div>
 
-        <!-- 5 day forecast -->
-        <div class="m-6 card col-6 col-md-8 display five-day-forecast">
-            <h3 class="Header">Extra Box</h3>
-            <br />
+        <div class="m-6 card col-6 col-md-8 display">
+            <h3 id="chuck-jokes-container" class="Header">Jokes</h3>
+            <div id="chuck-jokes" class="chuck-norris-icon" <br />
+
+
             <!-- cards with JS -->
-            <div id="cards" class="d-flex container">
+            <!-- <div id="cards" class="d-flex container">
                 <div id="currentDay" class="col-12-lg">
                     <div class="row" id="fiveDayWeather">
 
-                    </div>
+                    </div> -->
     </main>
-
 
     <div class="social-links">
         <div class="row">
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://cwspirits.com/?msclkid=bd59e71d565b18ae26e585606b1828d9"><i class="fa fa-facebook" aria-hidden="true"></i>Wine and Spirits</a>
+                <a href="https://cwspirits.com/?msclkid=bd59e71d565b18ae26e585606b1828d9"><i class="fa fa-facebook"
+                        aria-hidden="true"></i>Wine and Spirits</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://smugglies.com/spring-sale?utm_medium=msft_ads&utm_campaign=spring_sale&utm_source=standard&msclkid=03d0594e3a4d1d25ab593b330725b787"><i class="fa fa-instagram"
-                        aria-hidden="true"></i>Smugglies</a>
+                <a
+                    href="https://smugglies.com/spring-sale?utm_medium=msft_ads&utm_campaign=spring_sale&utm_source=standard&msclkid=03d0594e3a4d1d25ab593b330725b787"><i
+                        class="fa fa-instagram" aria-hidden="true"></i>Smugglies</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://www.homewetbar.com/glasses-drinkware/cocktail-glasses"><i class="fa fa-pinterest-p" aria-hidden="true"></i>Cocktail Glasses</a>
+                <a href="https://www.homewetbar.com/glasses-drinkware/cocktail-glasses"><i class="fa fa-pinterest-p"
+                        aria-hidden="true"></i>Cocktail Glasses</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+                <a href="https://chucknorris.com/"><i class="fa fa-twitter" aria-hidden="true"></i>Chuck Norris</a>
             </div>
         </div>
     </div>
