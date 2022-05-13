@@ -16,7 +16,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
-  /* color: var(--dark); */
   line-height: 1.5;
   font-size: 16px;
 }
@@ -41,6 +40,18 @@ main {
 
 p {
   font-size: 1.2rem;
+}
+
+.chuck-header, h3 {
+    padding: 10px;
+    font-weight: 700;
+    margin: 0;
+    color: rgb(76, 0, 255);
+    line-height: 1.25;
+}
+
+.chuck-jokes-section {
+  text-align: center;
 }
 
  .btn {
@@ -92,7 +103,6 @@ p {
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
 }
-
 
 .subnav-hero-section {
   text-align: center;
@@ -149,26 +159,12 @@ p {
   background: rgba(254, 254, 254, 0.15);
 }
 
-/* .hero {
-  padding: 3% 4%; */
-  /* background-color: var(--dark);
-  color: var(--primary);
-  background-image: linear-gradient(30deg, #c59205 0%, #d42709 100%);
-  text-align: center;
-}
-
-.hero p {
-  max-width: 75%;
-} */
-
 .app-title {
   font-size: 3rem;
-  /* background-color: var(--primary); */
   color: var(--dark);
   padding: 0 10px;
   display: inline-block;
   border-radius: var(--border-radius);
-  /* box-shadow: 6px 5px var(--light-dark); */
 }
 
 .list-group {
@@ -285,8 +281,6 @@ p {
             flex-direction: column;
   }
 }
-
-
 
 /* HEIGHT / WIDTH UTILS */
 .min-100-vh {
