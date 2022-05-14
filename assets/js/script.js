@@ -1,5 +1,6 @@
+
 var userFormEl = document.querySelector("#user-form");
-var nameInputEl = document.querySelector("#ingredientname");
+var nameInputEl = document.querySelector("#username");
 var chuckJokesButtonEl = document.getElementById("joke-form");
 var chuckJokesEl = document.getElementById("chuck-jokes");
 var chuckJokesHeader = document.getElementById("chuck-header");
@@ -11,18 +12,32 @@ var formSubmitHandler = function (event) {
   // prevent page from refreshing
   event.preventDefault();
   // get value from input element
-  var ingredientName = nameInputEl.value.trim();
+  var username = nameInputEl.value.trim();
 
-  if (ingredientName) {
-    getIngredientCard(ingredientName)
+  if (username) {
+    getNameAge(username);
+
     // clear old content
+    // repoContainerEl.textContent = "";
     nameInputEl.value = "";
-	console.log(ingredientName);
   } else {
     alert("");
   }
 };
 
+// fetch age/name information
+var getNameAge = function(name) {
+  var apiUrl = "https://api.agify.io/?name=" + name;
+  
+      // make a request to the url
+      fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+          console.log(data);
+        });
+      });
+    };
+
+  
 // event handler for joke form/box
 var jokeSubmitHandler = function (event) {
   event.preventDefault();

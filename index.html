@@ -19,22 +19,17 @@
         </ul>
     </header>
 
-
-    </header>
-
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
             <div class="card">
-                <h3 class="card-header">Search</h3>
+                <h3 class="card-header">Search Your Name Here!</h3>
                 <form id="user-form" class="card-body">
                     <label class="form-label" for="username"></label>
-                    <input name="ingredient" id="ingredientname" type="text" autofocus="true" class="form-input"
+                    <input name="username" id="username" type="text" autofocus="true" class="form-input"
                         placeholder="Enter" />
                     <button class="btn" id="submit">Search</button>
                 </form>
             </div>
-
-
             <div class="card d-flex">
                 <div id="search-history-buttons" class="card-body">
                     <h2 class="card-header">How About A Chuck Norris Joke?</h2>
@@ -45,7 +40,7 @@
             </div>
         </div>
 
-        <!-- box for name api results will need to change ID names -->
+        <!-- box for name api results will need to change id names -->
         <div class="m-6 card col-6 col-md-8 display">
             <h3 id="city-weather" class="list-group"></h3>
             <div id="current-weather" class="city-date-icon">
@@ -84,6 +79,7 @@
         </div>
     </div>
     <!-- links to pages end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
