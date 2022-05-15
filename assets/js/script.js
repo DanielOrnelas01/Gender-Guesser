@@ -3,7 +3,8 @@ var nameInputEl = document.querySelector("#username");
 var chuckJokesButtonEl = document.getElementById("joke-form");
 var chuckJokesEl = document.getElementById("chuck-jokes");
 var chuckJokesHeader = document.getElementById("chuck-header");
-var chuckJokesContainerEl = document.querySelector("#chuck-jokes-container");var genderPredictorContainerEl = document.querySelector(
+var chuckJokesContainerEl = document.querySelector("#chuck-jokes-container");
+var genderPredictorContainerEl = document.querySelector(
   "#gender-predictor-container"
 );
 var genderPredictor = document.getElementById("gender-predictor");
@@ -18,23 +19,20 @@ var formSubmitHandler = function (event) {
   let name = JSON.parse(localStorage.getItem("name")) || [];
 
   const nameEntered = {
-    name: username 
-  }
+    name: username,
+  };
 
-  console.log("newName in saveName", nameEntered)
+  console.log("newName in saveName", nameEntered);
 
   name.push(nameEntered);
-  console.log("name entered", name)
+  console.log("name entered", name);
   localStorage.setItem("name", JSON.stringify(name));
 
   if (username) {
     getNameAge(username);
-      // clear old content
+    // clear old content
     nameInputEl.value = "";
-    localStorage.setItem("user name", JSON.stringify(username));
-    localStorage.getItem("user name");
     return username;
-
   } else {
     alert("");
   }
@@ -57,7 +55,7 @@ var getNameAge = function (name) {
           data.name +
           "," +
           " we researched your name and it appears with a " +
-          data.probability +
+          data.probability * 100 +
           "% probability, that you are a " +
           data.gender +
           ".";
@@ -100,7 +98,6 @@ var getChuckJokes = function () {
     }
   });
 };
-
 
 userFormEl.addEventListener("submit", formSubmitHandler);
 chuckJokesButtonEl.addEventListener("click", jokeSubmitHandler);
