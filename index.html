@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href=”https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css” rel=”stylesheet”>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Age Guesser</title>
+    <title>Gender Guesser</title>
 </head>
 
 <body class="flex-column min-100-vh">
     <header class="subnav-hero-section">
-        <h1 class="subnav-hero-headline">Guess Your Age By Your Name</h1>
+        <h1 class="subnav-hero-headline">Guess Gender By Name</h1>
         <ul class="subnav-hero-subnav"><i class="fa-solid fa-people-group fa-7x"></i></ul>
     </header>
 
@@ -49,24 +49,24 @@
             \rounded-b lg:rounded-b-none lg:rounded-r
             p-4 leading-normal">
                 <div class="genderize-section">
-                    <h3 id="gender-predictor-container" class="list-group"></h3>
-                    <div id="gender-predictor" class="name-list-group">
+                    <h3 id="gender-predictor-container"></h3>
+                    <div id="gender-predictor">
                     </div>
                 </div>
 
                 <!-- chuck norris joke box start -->
-                <!-- <div class="m-6 card col-6 col-md-8 display"> -->
                 <div class="chuck-jokes-section">
                     <h2></h2>
                     <h3 id="chuck-header" class="chuck-header"></h3>
-                    <div id="chuck-jokes-container" class="list-group"></div>
+                    <div id="chuck-jokes-container"></div>
                 </div>
                 <!-- chuck norris joke box end -->
     </main>
 
     <!-- links to pages start -->
-    <div class="social-links">
-        <div class="row">
+    <footer class="text-center text-white" style="background-color: #0d0d0e;">
+        <div class="container p-6">
+          <div class="social-links">
             <div class="small-6 medium-3 columns text-center mobile-stack">
                 <a href="https://www.ssa.gov/OACT/babynames/decades/century.html"><i></i>Top Names Over The Last 100
                     Years</a>
@@ -82,8 +82,9 @@
                 <a href="https://chucknorris.com/"><i></i>Official Chuck Norris
                     Website</a>
             </div>
+          </div>
         </div>
-    </div>
+      </footer>
     <!-- links to pages end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
