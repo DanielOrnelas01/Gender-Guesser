@@ -14,30 +14,25 @@
 
 <body class="flex-column min-100-vh">
     <header class="subnav-hero-section">
-        <h1 class="subnav-hero-headline">Guess Your Name and Get A Chuck Norris Joke! <small>by Team Awesome</small></h1>
+        <h1 class="subnav-hero-headline">Guess Your Age By Your Name <small>by Team Awesome</small></h1>
         <ul class="subnav-hero-subnav">
         </ul>
-    </header>
-
-
     </header>
 
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
             <div class="card">
-                <h3 class="card-header">Search</h3>
+                <h3 class="card-header">Search Your Name Here!</h3>
                 <form id="user-form" class="card-body">
                     <label class="form-label" for="username"></label>
-                    <input name="ingredient" id="ingredientname" type="text" autofocus="true" class="form-input"
+                    <input name="username" id="username" type="text" autofocus="true" class="form-input"
                         placeholder="Enter" />
                     <button class="btn" id="submit">Search</button>
                 </form>
             </div>
-
-
             <div class="card d-flex">
                 <div id="search-history-buttons" class="card-body">
-                    <h2 class="card-header">We Got Jokes!</h2>
+                    <h2 class="card-header">How About A Chuck Norris Joke?</h2>
                     <form id="joke-form">
                         <button id="click" class="btn">Click Here!</button>
                     </form>
@@ -45,29 +40,24 @@
             </div>
         </div>
 
-
+        <!-- box for name api results will need to change id names -->
         <div class="m-6 card col-6 col-md-8 display">
             <h3 id="city-weather" class="list-group"></h3>
             <div id="current-weather" class="city-date-icon">
             </div>
         </div>
 
-        <div class="m-6 card col-6 col-md-8 display">
+        <!-- chuck norris joke box start -->
+        <!-- <div class="m-6 card col-6 col-md-8 display"> -->
+        <div class="chuck-jokes-section">
             <h2></h2>
-            <h3 id="chuck-header" class="Header"></h3>
-            <div id="chuck-jokes-container" class="list-group"></div> 
-            
-            <br />
-
-
-            <!-- cards with JS -->
-            <!-- <div id="cards" class="d-flex container">
-                <div id="currentDay" class="col-12-lg">
-                    <div class="row" id="fiveDayWeather">
-
-                    </div> -->
+            <h3 id="chuck-header" class="chuck-header"></h3>
+            <div id="chuck-jokes-container" class="list-group"></div>
+        </div>
+        <!-- chuck norris joke box end -->
     </main>
 
+    <!-- links to pages start -->
     <div class="social-links">
         <div class="row">
             <div class="small-6 medium-3 columns text-center mobile-stack">
@@ -75,20 +65,21 @@
                         aria-hidden="true"></i>Top Names Over The Last 100 Years</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a
-                    href="https://www.namegenerator.co/"><i
-                        class="fa fa-instagram" aria-hidden="true"></i>Name Generator</a>
+                <a href="https://www.namegenerator.co/"><i class="fa fa-instagram" aria-hidden="true"></i>Name
+                    Generator</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
                 <a href="https://en.wikipedia.org/wiki/Chuck_Norris"><i class="fa fa-pinterest-p"
                         aria-hidden="true"></i>Chuck Norris Wikipedia</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://chucknorris.com/"><i class="fa fa-twitter" aria-hidden="true"></i>Chuck Norris Website</a>
+                <a href="https://chucknorris.com/"><i class="fa fa-twitter" aria-hidden="true"></i>Official Chuck Norris
+                    Website</a>
             </div>
         </div>
     </div>
-
+    <!-- links to pages end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
