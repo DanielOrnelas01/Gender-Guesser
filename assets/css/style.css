@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: var(--primary);
   margin: 0;
@@ -104,7 +103,6 @@ h3 {
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
 }
-
 
 .subnav-hero-section {
   text-align: center;

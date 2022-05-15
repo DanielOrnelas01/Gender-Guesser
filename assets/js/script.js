@@ -16,12 +16,23 @@ var formSubmitHandler = function (event) {
   // get value from input element
   var username = nameInputEl.value.trim();
 
+  let name = JSON.parse(localStorage.getItem("name")) || [];
+
+  const nameEntered = {
+    name: username,
+  };
+
+  console.log("newName in saveName", nameEntered);
+
+  name.push(nameEntered);
+  console.log("name entered", name);
+  localStorage.setItem("name", JSON.stringify(name));
+
   if (username) {
     getNameAge(username);
-    localStorage.setItem("usernameentered", JSON.stringify(username));
     // clear old content
-    // repoContainerEl.textContent = "";
     nameInputEl.value = "";
+    return username;
   } else {
     alert("");
   }
@@ -39,9 +50,12 @@ var getNameAge = function (name) {
         console.log("genderize info", data);
 
         let userName = document.createElement("p");
-          userName.innerText = "Hello " + data.name + "," +
+        userName.innerText =
+          "Hello " +
+          data.name +
+          "," +
           " we researched your name and it appears with a " +
-          data.probability +
+          data.probability * 100 +
           "% probability, that you are a " +
           data.gender +
           ".";
