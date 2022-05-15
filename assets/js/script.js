@@ -4,7 +4,9 @@ var chuckJokesButtonEl = document.getElementById("joke-form");
 var chuckJokesEl = document.getElementById("chuck-jokes");
 var chuckJokesHeader = document.getElementById("chuck-header");
 var chuckJokesContainerEl = document.querySelector("#chuck-jokes-container");
-var genderPredictorContainerEl = document.querySelector("#gender-predictor-container");
+var genderPredictorContainerEl = document.querySelector(
+  "#gender-predictor-container"
+);
 var genderPredictor = document.getElementById("gender-predictor");
 
 // event handler for search form/box
@@ -16,6 +18,7 @@ var formSubmitHandler = function (event) {
 
   if (username) {
     getNameAge(username);
+    localStorage.setItem("usernameentered", JSON.stringify(username));
     // clear old content
     // repoContainerEl.textContent = "";
     nameInputEl.value = "";
@@ -26,23 +29,28 @@ var formSubmitHandler = function (event) {
 
 // fetch age/name information
 var getNameAge = function (name) {
-  var apiUrl = "https://api.genderize.io?name=" + name; 
-    // https://api.agify.io?name=
+  var apiUrl = "https://api.genderize.io?name=" + name;
+  // https://api.agify.io?name=
 
   // make a request to the url
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
-    response.json().then(function (data) {
-      console.log("genderize info", data);
+      response.json().then(function (data) {
+        console.log("genderize info", data);
 
-      let userName = data.name + " we researched your name and it appears with a " + data.probability + "% probability, that you are a " + data.gender + ".";
-      console.log(userName);
+        let userName = document.createElement("p");
+          userName.innerText = data.name +
+          " we researched your name and it appears with a " +
+          data.probability +
+          "% probability, that you are a " +
+          data.gender +
+          ".";
+        console.log(userName);
 
-      genderPredictor.append(userName);
-      // genderPredictorContainerEl.append(userName);
-
-    });
-  }
+        genderPredictor.append(userName);
+        // genderPredictorContainerEl.append(userName);
+      });
+    }
   });
 };
 
