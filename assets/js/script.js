@@ -4,6 +4,8 @@ var chuckJokesButtonEl = document.getElementById("joke-form");
 var chuckJokesEl = document.getElementById("chuck-jokes");
 var chuckJokesHeader = document.getElementById("chuck-header");
 var chuckJokesContainerEl = document.querySelector("#chuck-jokes-container");
+var genderPredictorContainerEl = document.querySelector("#gender-predictor-container");
+var genderPredictor = document.getElementById("gender-predictor");
 
 // event handler for search form/box
 var formSubmitHandler = function (event) {
@@ -29,9 +31,18 @@ var getNameAge = function (name) {
 
   // make a request to the url
   fetch(apiUrl).then(function (response) {
+    if (response.ok) {
     response.json().then(function (data) {
-      console.log(data);
+      console.log("genderize info", data);
+
+      let userName = data.name + " we researched your name and it appears with a " + data.probability + "% probability, that you are a " + data.gender + ".";
+      console.log(userName);
+
+      genderPredictor.append(userName);
+      // genderPredictorContainerEl.append(userName);
+
     });
+  }
   });
 };
 
