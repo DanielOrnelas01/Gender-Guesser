@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/b10b665b5e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href=”https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css” rel=”stylesheet”>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Age Guesser</title>
 </head>
@@ -41,27 +42,34 @@
         </div>
 
         <!-- box for name api results will need to change id names -->
-        <div class="genderize-section">
-            <h3 id="gender-predictor-container" class="list-group"></h3>
-            <div id="gender-predictor" class="name-list-group">
-            </div>
-        </div>
+        <div class=" w-full lg:max-w-full lg:flex">
+            <div class="border-r border-b border-l 
+            border-gray-400 lg:border-l-0 
+            lg:border-t lg:border-gray-400 bg-white
+            \rounded-b lg:rounded-b-none lg:rounded-r
+            p-4 leading-normal">
+                <div class="genderize-section">
+                    <h3 id="gender-predictor-container" class="list-group"></h3>
+                    <div id="gender-predictor" class="name-list-group">
+                    </div>
+                </div>
 
-        <!-- chuck norris joke box start -->
-        <!-- <div class="m-6 card col-6 col-md-8 display"> -->
-        <div class="chuck-jokes-section">
-            <h2></h2>
-            <h3 id="chuck-header" class="chuck-header"></h3>
-            <div id="chuck-jokes-container" class="list-group"></div>
-        </div>
-        <!-- chuck norris joke box end -->
+                <!-- chuck norris joke box start -->
+                <!-- <div class="m-6 card col-6 col-md-8 display"> -->
+                <div class="chuck-jokes-section">
+                    <h2></h2>
+                    <h3 id="chuck-header" class="chuck-header"></h3>
+                    <div id="chuck-jokes-container" class="list-group"></div>
+                </div>
+                <!-- chuck norris joke box end -->
     </main>
 
     <!-- links to pages start -->
     <div class="social-links">
         <div class="row">
             <div class="small-6 medium-3 columns text-center mobile-stack">
-                <a href="https://www.ssa.gov/OACT/babynames/decades/century.html"><i></i>Top Names Over The Last 100 Years</a>
+                <a href="https://www.ssa.gov/OACT/babynames/decades/century.html"><i></i>Top Names Over The Last 100
+                    Years</a>
             </div>
             <div class="small-6 medium-3 columns text-center mobile-stack">
                 <a href="https://www.namegenerator.co/"><i></i>Name
