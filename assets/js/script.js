@@ -39,7 +39,7 @@ var getNameAge = function (name) {
         console.log("genderize info", data);
 
         let userName = document.createElement("p");
-          userName.innerText = data.name +
+          userName.innerText = "Hello " + data.name + "," +
           " we researched your name and it appears with a " +
           data.probability +
           "% probability, that you are a " +
