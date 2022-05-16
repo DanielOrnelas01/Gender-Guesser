@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Age Guesser</title>
 </head>
-<body>
-    <header class="container mx-auto px4">
-        <h1>Guess Your Age By Your Name <small>by Team Awesome</small></h1>
-        <ul class="">
+<body class="">
+    <header class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible flex snap-center items-center justify-center h-72">
+        <h1 class="text-white text-2xl font-bold">Guess Your Age By Your Name <small>by Team Awesome</small></h1>
+        <ul class="float-none absolute text-center my-0 mr-auto w-full">
         </ul>
 
     </header>
 
     <main class="justify-between">
         <div>
-            <div class="">
-                <h3 class="">Search Your Name Here!</h3>
+            <div class="grid-cols-12 md:grid-cols-4">
+                <h3 class="grid-cols-2 md:grid-cols-1">Search Your Name Here!</h3>
                 <form id="user-form" class="">
                     <label class="form-label" for="username"></label>
                     <input name="username" id="username" type="text" autofocus="true" class=""
                         placeholder="Enter" />
-                    <button class="" id="submit">Search</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+                        id="submit">Search</button>
+                           
                 </form>
             </div>
             </div>
