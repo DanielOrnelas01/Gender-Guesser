@@ -40,40 +40,39 @@ var formSubmitHandler = function (event) {
     nameInputEl.value = "";
     return username;
   } else {
-    alert("");
+    // alert("");
+    // listen for click
+    modalBtn.addEventListener("click", openModal);
+    // listen for close click
+    closeBtn.addEventListener("click", closeModal);
+    // outside click
+    window.addEventListener("click", outsideClick);
+
+    // function to open modal
+    function openModal() {
+      // console.log(123);
+      modal.style.display = "block";
+    }
+
+    // function to close modal
+    function closeModal() {
+      // console.log(123);
+      modal.style.display = "none";
+    }
+
+    // function to close modal if outside click
+    function outsideClick(e) {
+      // console.log(123);
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // get modal element
+    var modal = document.getElementById("simpleModal");
+    // get open modal button
   }
 };
-
-// listen for click
-modalBtn.addEventListener("click", openModal);
-// listen for close click
-closeBtn.addEventListener("click", closeModal);
-// outside click
-window.addEventListener("click", outsideClick);
-
-// function to open modal
-function openModal() {
-  // console.log(123);
-  modal.style.display = "block";
-}
-
-// function to close modal
-function closeModal() {
-  // console.log(123);
-  modal.style.display = "none";
-}
-
-// function to close modal if outside click
-function outsideClick(e) {
-  // console.log(123);
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// get modal element
-var modal = document.getElementById("simpleModal");
-// get open modal button
 
 // fetch age/name information
 var getNameAge = function (name) {

@@ -71,10 +71,7 @@ h3 {
 }
 
 .btn:hover {
-  color: var(--primary);
-  background-color: var(--tertiary);
-  transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
+  background: rgb(28, 5, 92);
 }
 
 .btn-inline {
@@ -207,14 +204,23 @@ h3 {
 
 /* modal */
 .button {
-  background: coral;
-  padding: 1em 2em;
-  color: white;
-  border: 0;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  border: none;
+  outline: none;
+  background-color: var(--tertiary);
+  box-shadow: 3px 3px var(--dark);
+  transform: translate(-1px, -1px);
 }
 
 .button:hover {
-  background: grey;
+  background: rgb(28, 5, 92);
 }
 
 .modal {
@@ -231,9 +237,9 @@ h3 {
 
 .modal-content {
   background-color: #f4f4f4;
-  margin: 50% auto;
+  margin: 20% auto;
   padding: 20px;
-  width: 70%;
+  width: 30%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 0.5s;
