@@ -25,11 +25,10 @@ var formSubmitHandler = function (event) {
 
   console.log("newName in saveName", nameEntered);
 
-  name.push(nameEntered);
-  console.log("name entered", name);
-  localStorage.setItem("name", JSON.stringify(name));
-
   if (username) {
+    name.push(nameEntered);
+    console.log("name entered", name);
+    localStorage.setItem("name", JSON.stringify(name));
     getNameAge(username);
     // clear old content
     nameInputEl.value = "";
@@ -43,7 +42,7 @@ var formSubmitHandler = function (event) {
     // outside click
     window.addEventListener("click", outsideClick);
 
-   
+
 
     // function to close modal
     function closeModal() {
@@ -65,8 +64,8 @@ var formSubmitHandler = function (event) {
   }
 };
 
- // function to open modal
- function openModal() {
+// function to open modal
+function openModal() {
   // console.log(123);
   modal.style.display = "block";
 }
