@@ -30,10 +30,13 @@ var formSubmitHandler = function (event) {
     console.log("name entered", name);
     localStorage.setItem("name", JSON.stringify(name));
     getNameAge(username);
+
     // clear old content
     nameInputEl.value = "";
     return username;
   } else {
+    var modal = document.getElementById("simpleModal");
+    console.log(modal)
     // listen for click
     openModal();
     //modalBtn.addEventListener("click", openModal);
@@ -59,7 +62,7 @@ var formSubmitHandler = function (event) {
     }
 
     // get modal element
-    var modal = document.getElementById("simpleModal");
+    
     // get open modal button
   }
 };
