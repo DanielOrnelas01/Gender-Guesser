@@ -7,20 +7,15 @@ var chuckJokesContainerEl = document.querySelector("#chuck-jokes-container");
 var genderPredictorContainerEl = document.querySelector(
   "#gender-predictor-container"
 );
-var genderPredictor = document.getElementById("gender-predictor");
-// get modal element
-var modal = document.getElementById("simpleModal");
-// get open modal button
-var modalBtn = document.getElementById("modalBtn");
-// get close button
+var genderPredictor = document.getElementById("gender-predictor"); // get modal element
+var modal = document.getElementById("simpleModal"); // get open modal button
+var modalBtn = document.getElementById("modalBtn"); // get close button
 var closeBtn = document.getElementsByClassName("closeBtn")[0];
 
 // event handler for search form/box
 var formSubmitHandler = function (event) {
-  // prevent page from refreshing
-  event.preventDefault();
-  // get value from input element
-  var username = nameInputEl.value.trim();
+  event.preventDefault(); // prevent page from refreshing
+  var username = nameInputEl.value.trim();  // get value from input element
 
   let name = JSON.parse(localStorage.getItem("name")) || [];
 
@@ -30,29 +25,26 @@ var formSubmitHandler = function (event) {
 
   console.log("newName in saveName", nameEntered);
 
-  name.push(nameEntered);
-  console.log("name entered", name);
-  localStorage.setItem("name", JSON.stringify(name));
-
   if (username) {
+
+    name.push(nameEntered);
+    console.log("name entered", name);
+    localStorage.setItem("name", JSON.stringify(name));
+
     getNameAge(username);
     // clear old content
     nameInputEl.value = "";
     return username;
   } else {
-    // alert("");
     // listen for click
-    modalBtn.addEventListener("click", openModal);
+    openModal();
+    //modalBtn.addEventListener("click", openModal);
     // listen for close click
     closeBtn.addEventListener("click", closeModal);
     // outside click
     window.addEventListener("click", outsideClick);
 
-    // function to open modal
-    function openModal() {
-      // console.log(123);
-      modal.style.display = "block";
-    }
+   
 
     // function to close modal
     function closeModal() {
@@ -73,6 +65,13 @@ var formSubmitHandler = function (event) {
     // get open modal button
   }
 };
+
+ // function to open modal
+ function openModal() {
+  // console.log(123);
+  modal.style.display = "block";
+}
+
 
 // fetch age/name information
 var getNameAge = function (name) {

@@ -46,7 +46,7 @@ h3 {
   padding: 10px;
   font-weight: 700;
   margin: 0;
-  color: rgb(76, 0, 255);
+  color: rgb(0, 0, 0);
   line-height: 1.25;
 }
 
@@ -106,6 +106,7 @@ h3 {
   padding: 3% 4%;
   background-color: var(--dark);}
 
+/* HERO START */
 .subnav-hero-section {
   text-align: center;
   background: #1779ba;
@@ -160,6 +161,7 @@ h3 {
 .subnav-hero-subnav li a:hover {
   background: rgba(254, 254, 254, 0.15);
 }
+/* HERO END */
 
 .app-title {
   font-size: 3rem;
@@ -201,13 +203,13 @@ h3 {
   border-radius: var(--border-radius);
 }
 
-.icon-danger {
+/* .icon-danger {
   color: rgb(255, 70, 70);
 }
 
 .icon-success {
   color: rgb(29, 153, 255);
-}
+} */
 
 /* modal */
 .button {
