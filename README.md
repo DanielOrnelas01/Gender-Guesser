@@ -1,7 +1,7 @@
-# Event Scheduler
+# Gender Guesser
 
 # Purpose
-To have a site where a person can look up concerts in their State and also find local ??
+This website will guess if you are a male or female based on the name you enter. You can also click for some Chuck Norris quotes!
 
 * 
 * 
@@ -14,7 +14,7 @@ To have a site where a person can look up concerts in their State and also find 
 * HTML
 * CSS
 * JAVASCRIPT
-* Bootstrap
+* Tailwind
 * jQuery
 * Additional CDN libraries
 
@@ -29,4 +29,4 @@ To have a site where a person can look up concerts in their State and also find 
 
 
 # Contribution
-Made with ❤️ by 
+Made with ❤️ by Alana, Daniel, Jade, and Theresa
