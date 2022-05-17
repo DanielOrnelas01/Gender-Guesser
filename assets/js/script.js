@@ -25,12 +25,15 @@ var formSubmitHandler = function (event) {
 
   console.log("newName in saveName", nameEntered);
 
-  console.log(username)
+
   if (username) {
+
     name.push(nameEntered);
-  console.log("name entered", name);
-  localStorage.setItem("name", JSON.stringify(name));
-getNameAge(username);
+    console.log("name entered", name);
+    localStorage.setItem("name", JSON.stringify(name));
+
+    getNameAge(username);
+
     // clear old content
     nameInputEl.value = "";
     return username;
