@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,106 +13,106 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Gender Guesser</title>
 </head>
+
 <body class="">
-    <header class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible flex snap-center items-center justify-center h-72">
+    <header
+        class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible flex snap-center items-center justify-center h-72">
         <h1 class="text-white text-2xl font-bold">Guess Gender By Name</h1>
-        <ul class="float-none absolute text-center my-0 mr-auto w-full"><i class="fa-solid fa-people-group fa-7x"></i>
+        <ul class="float-none absolute text-center my-0 mr-auto w-full"><i
+                class="fa-solid fa-people-group fa-7x absolute inset-x-0 top-5"></i>
         </ul>
 
     </header>
 
     <main class="justify-between">
-        <div class="grid-cols-12 md:grid-cols-4">
-            <div class="block p-6 rounded-lg max-w-sm mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
-                <h3 class="grid-cols-2 md:grid-cols-1">Search Your Name Here!</h3>
-                <form id="user-form" class="">
+        <div class="grid-cols-12 lg:grid-cols-4">
+            <div class="block p-6 rounded-lg max-w-md mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
+                <h3
+                    class="grid-cols-2 md:grid-cols-1 bg-black text-white w-full relative inset-x-0 bottom-5 h-12 border-10 scale-x-105 p-4 rounded">
+                    Search Your Name Here!</h3>
+                <form id="user-form" class="p-2">
                     <label class="form-label" for="username"></label>
-                    <input name="username" id="username" type="text" autofocus="true" class="p-2"
+                    <input name="username" id="username" type="text" autofocus="true"
+                        class="border-4 border-gray-300 border-solid rounded-lg w-full block p-2 m-2"
                         placeholder="Enter" />
-                        <button class="button"
-                        id="modalBtn">Search</button>
-                           
+                    <button class="button" id="modalBtn">Search</button>
+
                 </form>
             </div>
-            </div>
+        </div>
 
-             <!-- modal button/box start -->
-             <div id="simpleModal" class="modal">
-                <div class="modal-content">
-                    <span class="closeBtn">&times;</span>
-                    <p>Please enter a name!</p>
-                </div>
+        <!-- modal button/box start -->
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <p>Please enter a name!</p>
             </div>
-            <!-- modal button/box end -->-
+        </div>
+        <!-- modal button/box end -->-
 
-       
-            <div class="grid-cols-12 md:grid-cols-4">
-                <div class="block p-6 rounded-lg max-w-sm mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
+        <!-- chuck norris box -->
+        <div class="grid-cols-12 md:grid-cols-4">
+            <div class="block p-6 rounded-lg max-w-sm mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
                 <div id="search-history-buttons" class="grid-cols-2 md:grid-cols-1">
-                    <h2 class="grid-cols-2 md:grid-cols-1">How About A Chuck Norris Joke?</h2>
+                    <h2
+                        class="grid-cols-2 md:grid-cols-1 bg-black text-white w-full relative inset-x-0 bottom-2 h-14 border-10 scale-x-105 p-4 rounded">
+                        How About A Chuck Norris Joke?</h2>
                     <form id="joke-form">
                         <button id="click" class="button">Click Here!</button>
                     </form>
-                    </div>
+                </div>
             </div>
         </div>
-    </div>
-        <!-- box for name api results will need to change id names-->
-        <div class="">
-            <h3 id="city-weather" class=""></h3>
-            <div id="current-weather" class="city-date-icon">
-            </div>
         </div>
 
-        
-
-        <!-- chuck norris joke box start -->
-        <!-- <div class="m-6 card col-6 col-md-8 display"> -->
-            <div class="chuck-jokes-section">
-                <h2></h2>
-                <h3 id="chuck-header" class="chuck-header"></h3>
-                <div id="chuck-jokes-container" class=""></div>
-            </div>
-            <!-- chuck norris joke box end -->
-            
-             <!-- box for genderize api -->
+        <!-- box for genderize api -->
         <div class=" w-full lg:max-w-full lg:flex">
             <div class="border-r border-b border-l 
-            border-gray-400 lg:border-l-0 
-            lg:border-t lg:border-gray-400 bg-white
-            \rounded-b lg:rounded-b-none lg:rounded-r
-            p-4 leading-normal">
+    border-gray-400 lg:border-l-0 
+    lg:border-t lg:border-gray-400 bg-white
+    \rounded-b lg:rounded-b-none lg:rounded-r
+    p-4 leading-normal">
                 <div class="genderize-section">
                     <h3 id="gender-predictor-container"></h3>
                     <div id="gender-predictor">
                     </div>
                 </div>
                 <!-- end box for genderize api -->
-        </main>
 
-        <!-- links to pages start-->
-        <div class="social-links">
-            <div class="">
-                <div class="">
-                    <a href="https://www.ssa.gov/OACT/babynames/decades/century.html">Top Names Over The Last 100 Years</a>
+
+                <!-- chuck norris joke box start -->
+                <div class="chuck-jokes-section">
+                    <h2></h2>
+                    <h3 id="chuck-header" class="chuck-header"></h3>
+                    <div id="chuck-jokes-container" class=""></div>
                 </div>
-                <div class="">
-                    <a href="https://www.namegenerator.co/">Name
-                        Generator</a>
-                </div>
-                <div class="">
-                    <a href="https://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris Wikipedia</a>
-                </div>
-                <div class="">
-                    <a href="https://chucknorris.com/">Official Chuck Norris
-                        Website</a>
-                </div>
+                <!-- chuck norris joke box end -->
+    </main>
+
+    <!-- links to pages start-->
+    <div class="social-links">
+        <div class="">
+            <div class="text-center underline underline-offset-2 ">
+                <a href="https://www.ssa.gov/OACT/babynames/decades/century.html">Top Names Over The Last 100 Years</a>
+            </div>
+            <div class="text-center underline underline-offset-2">
+                <a href="https://www.namegenerator.co/">Name
+                    Generator</a>
+            </div>
+            <div class="text-center underline underline-offset-2">
+                <a href="https://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris Wikipedia</a>
+            </div>
+            <div class="text-center underline underline-offset-2">
+                <a href="https://chucknorris.com/">Official Chuck Norris
+                    Website</a>
             </div>
         </div>
+    </div>
 
-        <!-- links to pages end -->
+    <!-- links to pages end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
 </body>
+
 </html>
