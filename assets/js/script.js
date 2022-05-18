@@ -11,11 +11,12 @@ var genderPredictor = document.getElementById("gender-predictor"); // get modal 
 var modal = document.getElementById("simpleModal"); // get open modal button
 var modalBtn = document.getElementById("modalBtn"); // get close button
 var closeBtn = document.getElementsByClassName("closeBtn")[0];
+var clearNamesButtonEl = document.getElementById("clearBtn");
 
 // event handler for search form/box
 var formSubmitHandler = function (event) {
   event.preventDefault(); // prevent page from refreshing
-  var username = nameInputEl.value.trim();  // get value from input element
+  var username = nameInputEl.value.trim(); // get value from input element
 
   let name = JSON.parse(localStorage.getItem("name")) || [];
 
@@ -25,13 +26,10 @@ var formSubmitHandler = function (event) {
 
   console.log("newName in saveName", nameEntered);
 
-
   if (username) {
-
     name.push(nameEntered);
     console.log("name entered", name);
     localStorage.setItem("name", JSON.stringify(name));
-
     getNameAge(username);
 
     // clear old content
@@ -39,7 +37,7 @@ var formSubmitHandler = function (event) {
     return username;
   } else {
     var modal = document.getElementById("simpleModal");
-    console.log(modal)
+    console.log(modal);
     // listen for click
     openModal();
     //modalBtn.addEventListener("click", openModal);
@@ -47,8 +45,6 @@ var formSubmitHandler = function (event) {
     closeBtn.addEventListener("click", closeModal);
     // outside click
     window.addEventListener("click", outsideClick);
-
-   
 
     // function to close modal
     function closeModal() {
@@ -65,17 +61,16 @@ var formSubmitHandler = function (event) {
     }
 
     // get modal element
-    
+
     // get open modal button
   }
 };
 
- // function to open modal
- function openModal() {
+// function to open modal
+function openModal() {
   // console.log(123);
   modal.style.display = "block";
 }
-
 
 // fetch age/name information
 var getNameAge = function (name) {
@@ -106,6 +101,14 @@ var getNameAge = function (name) {
     }
   });
 };
+
+// CLEAR BUTTON START
+var clearNameHandler = function (event) {
+  localStorage.removeItem("name");
+  window.location.reload();
+    console.log(event);
+}
+// CLEAR BUTTON END
 
 // event handler for joke form/box
 var jokeSubmitHandler = function (event) {
@@ -140,3 +143,6 @@ var getChuckJokes = function () {
 
 userFormEl.addEventListener("submit", formSubmitHandler);
 chuckJokesButtonEl.addEventListener("click", jokeSubmitHandler);
+clearNamesButtonEl.addEventListener("click", clearNameHandler); // CLEAR BUTTON
+
+
