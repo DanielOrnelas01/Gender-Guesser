@@ -108,6 +108,7 @@ var getNameAge = function (name) {
 var jokeSubmitHandler = function (event) {
   event.preventDefault();
   getChuckJokes();
+  
   // console.log(event); <-- verify click event happened
 };
 
@@ -115,8 +116,10 @@ var displayChuckJokes = function (chuckJokes) {
   console.log(chuckJokes);
 
   // clear old content
-  chuckJokesContainerEl.textContent = "";
+  const element = document.getElementById("chuck-joke")
+  element.remove();
 };
+
 
 var getChuckJokes = function () {
   var apiURL = "https://api.chucknorris.io/jokes/random";
@@ -130,8 +133,9 @@ var getChuckJokes = function () {
         joke.innerText = data.value;
 
         chuckJokesHeader.append(joke);
+        
       });
-    }
+    } 
   });
 };
 
