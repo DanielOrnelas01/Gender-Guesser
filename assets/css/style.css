@@ -53,6 +53,10 @@ h3 {
   text-align: center;
 }
 
+.img-chuck {
+  height: 100%;
+}
+
 .btn {
   font-size: 1.3rem;
   text-decoration: none;
