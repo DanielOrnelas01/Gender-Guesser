@@ -14,102 +14,104 @@
     <title>Gender Guesser</title>
 </head>
 
-<body class="">
+<body>
     <header
         class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible flex snap-center items-center justify-center h-72">
         <h1 class="text-white text-2xl font-bold">Guess Gender By Name</h1>
-        <ul class="float-none absolute text-center my-0 mr-auto w-full"><i
-                class="fa-solid fa-people-group fa-7x absolute inset-x-0 top-5"></i>
+        <img src="/assets/css/chuck_norris_PNG23.png" class="img-chuck"></a>
+        <ul class="float-none absolute text-center my-0 mr-auto w-full">
+            <!-- <i
+                class="fa-solid fa-people-group fa-7x absolute inset-x-0 top-5"></i> -->
         </ul>
-
     </header>
 
-    <main class="justify-between">
-        <div class="grid-cols-12 lg:grid-cols-4">
-            <div class="block p-6 rounded-lg max-w-md mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
-                <h3
-                    class="grid-cols-2 md:grid-cols-1 bg-black text-white w-full relative inset-x-0 bottom-5 h-12 border-10 scale-x-105 p-4 rounded">
-                    Search Your Name Here!</h3>
-                <form id="user-form" class="p-2">
-                    <label class="form-label" for="username"></label>
-                    <input name="username" id="username" type="text" autofocus="true"
-                        class="border-4 border-gray-300 border-solid rounded-lg w-full block p-2 m-2"
-                        placeholder="Enter" />
-                    <button class="button" id="modalBtn">Search</button>
-
-                </form>
-            </div>
-        </div>
-
-        <!-- modal button/box start -->
-        <div id="simpleModal" class="modal">
-            <div class="modal-content">
-                <span class="closeBtn">&times;</span>
-                <p>Please enter a name!</p>
-            </div>
-        </div>
-        <!-- modal button/box end -->-
-
-        <!-- chuck norris box -->
-        <div class="grid-cols-12 md:grid-cols-4">
-            <div class="block p-6 rounded-lg max-w-sm mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
-                <div id="search-history-buttons" class="grid-cols-2 md:grid-cols-1">
-                    <h2
-                        class="grid-cols-2 md:grid-cols-1 bg-black text-white w-full relative inset-x-0 bottom-2 h-14 border-10 scale-x-105 p-4 rounded">
-                        How About A Chuck Norris Joke?</h2>
-                    <form id="joke-form">
-                        <button id="click" class="button">Click Here!</button>
-                    </form>
+    <main>
+        <div class="grid grid-cols-3">
+            <div class="relative">
+                <div
+                    class="absolute left-40 top-0 block rounded-lg w-1/2 mt-0 mb-20 border-solid border-4 border-black place-items-center">
+                    <h3 class="text-center bg-black text-white w-full h-12 border-10 p-4 rounded mb-4">
+                        Can We Guess Your Gender?</h3>
+                    <form id="user-form" class="p-2">
+                        <label class="form-label" for="username"></label>
+                        <input name="username" id="username" type="text" autofocus="true"
+                            class="border-4 border-gray-300 border-solid rounded-lg w-full block p-2"
+                            placeholder="Enter name" />
+                        <button class="button" id="modalBtn">Search Name</button>
+                        <button class="button" id="clearBtn">Clear Name Search</button>
+                    </form>                
                 </div>
             </div>
-        </div>
-        </div>
+            <!-- box for genderize api -->
+            <div id="answer" class="text-center border-solid border-4">
+                <div class="">
+                    <div class="genderize-section">
+                        <h3 id="gender-predictor-container"></h3>
+                        <div id="gender-predictor"></div>
+                    </div>
+                    <!-- end box for genderize api -->
 
-        <!-- box for genderize api -->
-        <div class=" w-full lg:max-w-full lg:flex">
-            <div class="border-r border-b border-l 
-    border-gray-400 lg:border-l-0 
-    lg:border-t lg:border-gray-400 bg-white
-    \rounded-b lg:rounded-b-none lg:rounded-r
-    p-4 leading-normal">
-                <div class="genderize-section">
-                    <h3 id="gender-predictor-container"></h3>
-                    <div id="gender-predictor">
+
+                    <!-- chuck norris joke box start -->
+                    <div id="chuck-joke" class="chuck-jokes-section">
+                        <h2></h2>
+                        <h3 id="chuck-header" class="chuck-header"></h3>
+                        <div id="chuck-jokes-container" class=""></div>
                     </div>
                 </div>
-                <!-- end box for genderize api -->
+            </div>
+            <!-- chuck norris joke box end -->
 
-
-                <!-- chuck norris joke box start -->
-                <div class="chuck-jokes-section">
-                    <h2></h2>
-                    <h3 id="chuck-header" class="chuck-header"></h3>
-                    <div id="chuck-jokes-container" class=""></div>
+            <!-- modal button/box start -->
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <span class="closeBtn">&times;</span>
+                    <p>Please enter a name!</p>
                 </div>
-                <!-- chuck norris joke box end -->
+            </div>
+            <!-- modal button/box end -->
+
+            <!-- chuck norris box -->
+            <div class="relative w-100">
+                <div
+                    class="absolute top-0 right-40 block rounded-lg mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
+                    <!-- <div id="search-history-buttons"> -->
+                    <h2 class="text-center bg-black text-white w-full h-14 border-10 p-4 rounded">
+                        How About A Chuck Norris Joke?</h2>
+                    <form class="p-2" id="joke-form">
+                        <button id="click" class="button">Click Here!</button>
+                    </form>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- links to pages start-->
-    <div class="social-links">
-        <div class="">
-            <div class="text-center underline underline-offset-2 ">
-                <a href="https://www.ssa.gov/OACT/babynames/decades/century.html">Top Names Over The Last 100 Years</a>
-            </div>
-            <div class="text-center underline underline-offset-2">
-                <a href="https://www.namegenerator.co/">Name
-                    Generator</a>
-            </div>
-            <div class="text-center underline underline-offset-2">
-                <a href="https://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris Wikipedia</a>
-            </div>
-            <div class="text-center underline underline-offset-2">
-                <a href="https://chucknorris.com/">Official Chuck Norris
-                    Website</a>
+    <footer>
+        
+        <div class="social-links absolute inset-x-0 bottom-0">
+            <div>
+                <div class="text-center underline underline-offset-2 ">
+                    <a href="https://www.ssa.gov/OACT/babynames/decades/century.html">Top Names Over The Last 100
+                        Years</a>
+                </div>
+                <div class="text-center underline underline-offset-2">
+                    <a href="https://www.namegenerator.co/">Name Generator</a>
+                </div>
+                <div class="text-center underline underline-offset-2">
+                    <a href="https://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris Wikipedia</a>
+                </div>
+                <div class="text-center underline underline-offset-2">
+                    <a href="https://chucknorris.com/">Official Chuck Norris
+                        Website</a>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 
     <!-- links to pages end -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 
