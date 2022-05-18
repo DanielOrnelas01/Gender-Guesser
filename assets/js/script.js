@@ -16,7 +16,7 @@ var clearNamesButtonEl = document.getElementById("clearBtn");
 // event handler for search form/box
 var formSubmitHandler = function (event) {
   event.preventDefault(); // prevent page from refreshing
-  console.log(event)
+  console.log(event);
   var username = nameInputEl.value.trim(); // get value from input element
 
   let name = JSON.parse(localStorage.getItem("name")) || [];
@@ -65,7 +65,7 @@ var formSubmitHandler = function (event) {
 
 // function to open modal
 function openModal() {
-  console.log('OPEN MODAL RAN!!');
+  console.log("OPEN MODAL RAN!!");
   modal.style.display = "block";
 }
 
