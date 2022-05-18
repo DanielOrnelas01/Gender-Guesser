@@ -59,10 +59,6 @@ var formSubmitHandler = function (event) {
         modal.style.display = "none";
       }
     }
-
-    // get modal element
-
-    // get open modal button
   }
 };
 
@@ -106,8 +102,8 @@ var getNameAge = function (name) {
 var clearNameHandler = function (event) {
   localStorage.removeItem("name");
   window.location.reload();
-    console.log(event);
-}
+  console.log(event);
+};
 // CLEAR BUTTON END
 
 // event handler for joke form/box
@@ -144,5 +140,3 @@ var getChuckJokes = function () {
 userFormEl.addEventListener("submit", formSubmitHandler);
 chuckJokesButtonEl.addEventListener("click", jokeSubmitHandler);
 clearNamesButtonEl.addEventListener("click", clearNameHandler); // CLEAR BUTTON
-
-
