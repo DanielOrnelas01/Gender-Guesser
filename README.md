@@ -1,4 +1,4 @@
-# Event Scheduler
+# Gender Guesser
 
 # Purpose
 To have a user be able to search any first name to have the server guess if they are male or female.
