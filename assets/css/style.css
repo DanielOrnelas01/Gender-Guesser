@@ -10,6 +10,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   min-height: 100vh;
   background-color: var(--primary);
@@ -32,10 +33,7 @@ h6 {
   line-height: 1.25;
 }
 
-main {
-  margin: 20px auto;
-  width: 94%;
-}
+
 
 p {
   font-size: 1.2rem;
@@ -54,9 +52,7 @@ h3 {
   text-align: center;
 }
 
-.img-chuck {
-  height: 100%;
-}
+
 
 .btn {
   font-size: 1.3rem;

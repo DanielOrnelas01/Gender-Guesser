@@ -142,3 +142,5 @@ var getChuckJokes = function () {
 userFormEl.addEventListener("submit", formSubmitHandler);
 chuckJokesButtonEl.addEventListener("click", jokeSubmitHandler);
 clearNamesButtonEl.addEventListener("click", clearNameHandler); // CLEAR BUTTON
+
+

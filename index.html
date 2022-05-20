@@ -16,21 +16,18 @@
 
 <body>
     <header
-        class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible flex snap-center items-center justify-center h-72">
+        class="container mx-auto px4 text-center bg-blue-500 bg-cover relative overflow-visible  snap-center items-center justify-center h-72 w-full md:flex lg:flex" >
         <h1 class="text-white text-2xl font-bold">Guess Gender By Name</h1>
-        <img src="/assets/css/chuck_norris_png23.png" class="img-chuck"></a>
-        <ul class="float-none absolute text-center my-0 mr-auto w-full">
-            <!-- <i
-                class="fa-solid fa-people-group fa-7x absolute inset-x-0 top-5"></i> -->
-        </ul>
+        <img src="/assets/css/chuck_norris_png23.png" class="h-64 md:h-full lg:h-full"></a>
+
     </header>
 
-    <main>
+    <main class="mb-40 md:mb-12 lg-mb-12">
         <div class="grid grid-cols-3">
-            <div class="relative">
+            <div class="relative left-3">
                 <div
-                    class="absolute left-40 top-0 block rounded-lg w-1/2 mt-0 mb-20 border-solid border-4 border-black place-items-center">
-                    <h3 class="text-center bg-black text-white w-full h-12 border-10 p-4 rounded mb-4">
+                    class="block rounded-lg mt-0 mb-20 border-solid border-4 border-black place-items-center md:absolute lg:absolute">
+                    <h3 class="text-center bg-black text-white w-full border-10 p-4 rounded mb-4 md:h-12 lg:h-12">
                         Can We Guess Your Gender?</h3>
                     <form id="user-form" class="p-2">
                         <label class="form-label" for="username"></label>
@@ -42,8 +39,22 @@
                     </form>
                 </div>
             </div>
+            
+              <!-- chuck norris box -->
+              <div class="relative w-100 top-96 right-28 md:top-72 md:right-64 lg:top-0 absolute ">
+                <div
+                    class="block rounded-lg mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black md:absolute lg:absolute lg:left-44 ">
+                    <!-- <div id="search-history-buttons"> -->
+                    <h2 class="text-center bg-black text-white w-full border-10 p-4 rounded md:h-14 lg:h-12">
+                        How About A Chuck Norris Joke?</h2>
+                    <form class="p-2" id="joke-form">
+                        <button id="click" class="button">Click Here!</button>
+                    </form>
+                    <!-- </div> -->
+                </div>
+            </div>
             <!-- box for genderize api -->
-            <div id="answer" class="text-center border-solid border-4">
+            <div id="answer" class="text-center border-solid border-4 border-gray-400 lg:h-16">
                 <div class="">
                     <div class="genderize-section">
                         <h3 id="gender-predictor-container"></h3>
@@ -71,26 +82,14 @@
             </div>
             <!-- modal button/box end -->
 
-            <!-- chuck norris box -->
-            <div class="relative w-100">
-                <div
-                    class="absolute top-0 right-40 block rounded-lg mt-0 mr-0 mb-20 ml-0 border-solid border-4 border-black">
-                    <!-- <div id="search-history-buttons"> -->
-                    <h2 class="text-center bg-black text-white w-full h-14 border-10 p-4 rounded">
-                        How About A Chuck Norris Joke?</h2>
-                    <form class="p-2" id="joke-form">
-                        <button id="click" class="button">Click Here!</button>
-                    </form>
-                    <!-- </div> -->
-                </div>
-            </div>
+          
         </div>
     </main>
 
     <!-- links to pages start-->
     <footer>
 
-        <div class="social-links absolute inset-x-0 bottom-0">
+        <div class="social-links md:absolute inset-x-0 bottom-0 lg:absolute inset-x-0 bottom-0">
             <div>
                 <div class="text-center underline underline-offset-2 ">
                     <a href="https://www.ssa.gov/OACT/babynames/decades/century.html">Top Names Over The Last 100
